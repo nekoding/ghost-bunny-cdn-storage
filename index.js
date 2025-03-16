@@ -11,8 +11,8 @@ class BunnyCDNAdapter extends BaseAdapter {
     this.options = config || {};
     this.options.endpoint =
       this.options.endpoint ||
-      'https://storage.bunnycdn.com' ||
-      process.env.BUNNYCDN_ENDPOINT;
+      process.env.BUNNYCDN_ENDPOINT ||
+      'https://storage.bunnycdn.com';
     this.options.storageZone =
       this.options.storageZone || process.env.BUNNYCDN_STORAGE_ZONE;
     this.options.hostname =
